@@ -12,8 +12,12 @@ struct Cli {
 async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
     let args = Cli::parse();
 
-    if (&args.cmd == "version") {
-        println!("ProductSpring CLI version 0.0.1"); // todo: reference the current git tag release
+    match &args.cmd.as_str() {
+        &"version"  => println!("ProductSpring CLI version 0.0.1"),
+        &"login"    => println!("Loggging you in..."),
+        &"org"      => println!("Organization..."),
+        &"projects" => pritnln!("Projects..."),
+        &_ => println!("Unknown command.")
     }
 
     Ok(())

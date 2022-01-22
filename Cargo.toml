@@ -1,9 +1,13 @@
 [package]
 name = "pscli"
 version = "0.1.0"
+authors = ["Denis Lessard <denislessard@protonmail.com>"]
 edition = "2021"
+respository = "https://github.com/DenLes/pscli"
+readme = "README.md"
 
 [dependencies]
 clap = { version = "3.0", features = ["derive"] }
 hyper = { version = "0.14", features = ["full"] }
+hyper-tls = { version = "0.5.0" }
 tokio = { version = "1", features = ["full"] }
